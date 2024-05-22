@@ -41,10 +41,10 @@ ou `http://localhost:3000/corridas` para retornar todas as `Corridas`.
 - A requisição POST deve ser chamada no seguinte endereço: `http://localhost:3000/corrida` para criar uma nova `corrida`,
 passando os seguintes parâmetros em formato `JSON `(em sua ferramenta de teste):
 
-{
-	"nome": "Leonardo", // Sendo aqui o nome do motorista da corrida.
-	"carro": "Audi A3", // Sendo aqui o modelo do carro.
-	"cor": "Preto" // Sendo aqui aqui a cor do carro.
+{<br>
+	"nome": "Leonardo", // Sendo aqui o nome do motorista da corrida.<br>
+	"carro": "Audi A3", // Sendo aqui o modelo do carro.<br>
+	"cor": "Preto" // Sendo aqui aqui a cor do carro.<br>
 }
 
 OBS: Por padrão é gerado um `status` e um `id`.
@@ -62,18 +62,18 @@ OBS: Por padrão é gerado um `status` e um `id`.
 
 ### TESTES
 - Para testar, foi utilizado o `Jest`.
-- Para realizar o teste unitário, pare sua aplicação apertando CTRL C e digite o seguinte comando: `npm test`.
+- Para realizar o teste unitário, pare sua aplicação apertando CTRL + C e digite o seguinte comando: `npm test`.
 - O código de teste se encontra na pasta `src/tests/create-corrida.test.js`. O código testado foi para verificar se
 está criando uma nova Corrida e tendo seus `Callbacks` sendo retornados corretamente ao usuário, podendo conferir diretamente no banco de dados ou na requisição `GET` se a `corrida` foi ou não criada.
 
 # NOTAS ADICIONAIS / OBSERVAÇÕES / VALIDAÇÕES 
-- Foi realizado toda a aplicação base solicitada, acrescentei também algumas validações básicas, sendo elas:
+- Foi realizado toda a aplicação base para funcionamento, acrescentei também algumas validações básicas, sendo elas:
 
 1 - Ter apenas `3` tipos de `status` possiveis, sendo eles: `ATIVO`, `FINALIZADO`e `CANCELADO`, podendo assim trabalhar ``MINIMAMENTE`` com cases reais.
 
 2 - Transformar todas `Strings` em `UperCase`, assim evitando problemas na hora de testar a API, digitando: `cANCelaDo` ou algo do tipo, padronizando também no Banco de Dados.
 
-3 - A corrida ja iniciar como `ATIVO`, pois seria impossivel uma corrida iniciar como `CANCELADO` ou algo do tipo, e também não podendo mais voltar para `ATIVO`, afinal uma `corrida` finalizada, está finalizada (Claro, ainda poderia haver muitas outras situações e validações para fazer, essa serve como uma ideia apenas).
+3 - A corrida ja iniciar como `ATIVO`, pois seria impossivel uma corrida iniciar como `CANCELADO` ou algo do tipo, e também não podendo mais voltar para `ATIVO`, afinal uma `corrida` finalizada, está finalizada (Claro, ainda poderia haver muitas outras situações e validações para fazer, essas são apenas algumas ideias).
 
 4 - `>> NÃO <<` realizei algumas validações como `campos vazios`, nomes contendo `números` ou algo do tipo, pois o intuito seria apenas a criação / cancelamento de `corridas`, então foquei primordialmente em um código `limpo`, `bem estruturado` e de `fácil manutenção`.
 
