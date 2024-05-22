@@ -55,9 +55,9 @@ OBS: Por padrão é gerado um `status` e um `id`.
 ### `src/routes/update-corrida.js`
 - A requisição PUT deve ser chamada no seguinte endereço: `http://localhost:3000/corrida` para atualizar o `status` de uma `corrida`, passando os seguintes parâmetros em formato `JSON`.
 
-{
-	"id": 4, // O ID que deverá ser alterado o `status`.
-	"status": "cancelado" // Para o novo `status`, nesse caso está sendo alterado para o `status` CANCELADO.
+{<br>
+	"id": 4, // O ID que deverá ser alterado o `status`.<br>
+	"status": "cancelado" // Para o novo `status`, nesse caso está sendo alterado para o `status` CANCELADO.<br>
 }
 
 ### TESTES
